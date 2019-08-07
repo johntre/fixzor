@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p #{username} is currently logged in.
+  form(action="/", method="POST")
+    input(name="lead_email",type="email", placeholder="Enter your email address")
+    button(type="submit") Submit
+  if leads
+      h1 Leads
+      for lead in leads
+        p
+          span #{lead.email}
+          |
+          a(href="/lead/" + lead.id) Details
+
+  img(src='https://pcdn.columbian.com/wp-content/uploads/2017/01/162399-01-13-kids-shoveli3.jpg')
