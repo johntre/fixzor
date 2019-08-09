@@ -6,6 +6,8 @@ block content
   p #{username} is currently logged in.
   form(action="/", method="POST")
     input(name="lead_email",type="email", placeholder="Enter your email address")
+    //- input(name="first_name",type="text", placeholder="Enter your first name")
+    //- input(name="last_name",type="text", placeholder="Enter your last name")  
     button(type="submit") Submit
   if leads
       h1 Leads
