@@ -7,3 +7,6 @@ block content
     //- span #{lead.first_name}
     //- span #{lead.last_name}
     a(href="/lead/" + lead.id + "/edit") Edit
+    
+    form(action="/lead/" + lead.id + "/delete", method="POST")
+      button(type="submit") Delete
